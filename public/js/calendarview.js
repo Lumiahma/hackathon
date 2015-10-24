@@ -5,6 +5,18 @@ function printTestNumber()
 	return "Test number is " + testeri;
 }
 
+//change a timestamp to date
+function timestampToDate(param)
+{
+		ts = new Date(param);
+		
+    return ts.getFullYear() + "-" + (ts.getMonth() < 10 ? "0" : "") + ts.getMonth() + "-" 
+					+ (ts.getDate() < 10 ? "0" : "") + ts.getDate() + 'T' + 
+      (ts.getHours() < 10 ? "0" : "") + ts.getHours() + ":" + 
+      (ts.getMinutes() < 10 ? "0" : "") + ts.getMinutes() + ":" + 
+      (ts.getSeconds() < 10 ? "0" : "") + ts.getSeconds();
+}
+
 function fetchTest()
 {
 	//initialize a new http request
@@ -25,7 +37,7 @@ function fetchTest()
 				{
 					console.log("Request successfully resolved");
 					console.log("Request output: " + request.responseText);
-					resolve(JSON.parse(request.statusText));
+					resolve(JSON.parse(request.responseText));
 				}
 				else //otherwise resolve with a placeholder value and throw an error
 				{
@@ -60,7 +72,33 @@ $(document).ready(function()
 
 	$(".testRetrieval").on("click", function()
 	{
-		fetchTest();
+		fetchTest().then(function(result)
+		{
+			console.log("Test 1:" + result[0].title);
+			console.log("Test 2:" + timestampToDate(result[0].times[0].start_datetime));
+			console.log("Test 3:" + timestampToDate(result[0].times[0].end_datetime));
+			console.log("Test 4:" + result[0].times[0].start_datetime);
+			console.log("Test 5:" + result[0].times[0].end_datetime);
+			console.log("Test 6:" + result[0].start_datetime);
+			console.log("Test 7:" + result[0].end_datetime);
+			console.log("Test 8:" + result[0].contact_info.link);
+			console.log("Test 9:" + result[0].single_datetime == false);
+			console.log("Test 10:" + Date.now());
+			
+			var testEvent = 
+			{
+				"title": result[0].title + "\n\n" + result[0].description,
+				"allDay": false,
+				"start": !result[0].single_datetime ? result[0].times[0].start_datetime : 					
+					result[0].start_datetime,
+				"end":	 !result[0].single_datetime ? result[0].times[0].end_datetime : 
+					result[0].end_datetime
+				/*"start": Date.now(),
+				"end": Date.now() + 3600*/
+			}			
+			
+			$('#calendar').fullCalendar('renderEvent',testEvent);	
+		});
 	});	
 
 
