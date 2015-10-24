@@ -8,6 +8,19 @@ h2
 	color: red;
 }
 
+#header
+{
+	color: black;
+	height: 20%;
+}
+
+#footer
+{
+	color: white;
+	background-color: black;
+	height: 20%;
+}
+
 .example-class
 {
 	font-size: 110%;
