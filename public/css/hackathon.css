@@ -1,7 +1,7 @@
 body
 {
 	font-size: 62.5%;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 #header table
@@ -66,6 +66,13 @@ body
 	min-height: 200px;
 }
 
+.buttonpic
+{
+	min-width: 50px;
+	min-height: 50px;
+	padding-bottom: 20px;
+}
+
 .blue
 {
 	background-color: #6cc5ef;
@@ -84,4 +91,34 @@ body
 .red
 {
 	background-color: #efbcbc;
+}
+
+.dropdownmenu
+{
+	display: none;
+	position: absolute;
+	vertical-align: top;
+	left: 2px;
+	top: 65px;
+	width: 300px;
+	height: 100%;
+	background-color: black;
+	opacity: 0.95;
+	color: white;
+	z-index: 2;
+	
+}
+
+.dropdownitem
+{
+	font-size: 2em;
+	color: white;
+	background-color: #0A0A0A;
+	width: 300px;
+	text-align: left;	
+}
+
+.dropdownitem.indent
+{
+	margin-left: 40px;
 }

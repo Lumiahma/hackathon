@@ -74,6 +74,22 @@ $(document).ready(function()
 {
 	console.log("Beginning initial setup");
 
+	$('.titlebar-drop').on("click", function(evt)
+	{
+		console.log("Test: " + $('.dropdownmenu').css("display"));
+
+		if($('.dropdownmenu').css("display") == "block")
+		{
+			$('.dropdownmenu').hide();
+		}
+		else
+		{
+			$('.dropdownmenu').show();
+		}
+
+		console.log("HURDUR");
+	});
+
 	$('#calendar').fullCalendar
 	({
 		events: [
