@@ -2,13 +2,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/hackathon.css">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/fullcalendar.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
 		<script src="js/lib/jquery.js"></script>
 		<script src="js/lib/bootstrap.min.js"></script>
 		<script src="js/moment.js"></script>
-		<script src="js/fullcalendar.min.js"></script>
+		<script src="js/fullcalendar.js"></script>
 		<script src="js/underscore.js"></script>	
 
 		<script src="js/calendarview.js"></script>
@@ -18,18 +18,31 @@
 	<body>
 		<section id="app-body">
 			<div id="header">
-				<h4>Header segment here</h4>
-				<button class="testRetrieval btn-default">Execute test retrieval</button>			
+				<table>
+					<tr class="titlebar">
+						<td><button class="titlebar-drop fixleft">Title Bar</button><td>
+						<td><button class="alarm fixright">Alarm here</button></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<button class="largebutton green">NW</button>
+						<button class="largebutton yellow">NE</button>
+					</tr>
+				</table>	
 			</div>
 			<div id="core">
-				<h2>NYAAARRRGHHH</h2>
-				
+				<button class="testRetrieval btn-default">Execute test retrieval</button>
 				<div id="calendar">
 				</div>
-
 			</div>
 			<div id="footer">
-				<h4>Footer segment here</h4>
+				<table>
+					<tr>
+						<button class="largebutton blue">SW</button>
+						<button class="largebutton red">SE</button>
+					</tr>
+				</table>	
 			</div>
 		</section>
 	</body>
