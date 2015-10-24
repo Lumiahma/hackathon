@@ -1,0 +1,15 @@
+{
+	"name": "hackathon-app",
+	"author": "team 3",
+	"license": "gnu general license",
+	"dependencies":
+	{
+		"jquery":"latest",
+		"underscore":"latest",
+		"chartist":"latest",
+		"backbone":"latest",
+		"requirejs":"latest",
+		"bower": "latest",
+		"express":"latest"
+	}
+}
