@@ -1,4 +1,19 @@
-.body
+body
 {
 	font-size: 62.5%;
+}
+
+h2
+{
+	color: red;
+}
+
+.example-class
+{
+	font-size: 110%;
+}
+
+#example-id
+{
+	position: absolute;
 }
