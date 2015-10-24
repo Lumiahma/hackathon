@@ -7,7 +7,7 @@ body
 #header table
 {
 	color: black;
-	
+	vertical-align: middle;	
 }
 
 #header table td
@@ -68,13 +68,17 @@ body
 {
 	width: 50%;
 	height: 100%;
-	min-height: 150px;
 }
 
 .eventbutton
 {
 	width: 25%;
+}
+
+.largebutton, .eventbutton
+{
 	min-height: 150px;
+	/*border: none;*/
 }
 
 .buttonpic
@@ -131,5 +135,5 @@ body
 
 .dropdownitem.indent
 {
-	margin-left: 40px;
+	margin-left: 3%;
 }
