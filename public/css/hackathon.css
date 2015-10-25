@@ -2,6 +2,7 @@ body
 {
 	font-size: 62.5%;
 	/*text-align: center;*/
+	font-family: Verdana, Geneva, sans-serif;
 }
 
 #header table
@@ -27,7 +28,12 @@ body
 
 .titlebar-drop
 {
-	float: left;
+	float: left; border: none;
+}
+
+.alarm
+{
+	float: right; border: none;
 }
 
 #footer table
@@ -64,9 +70,50 @@ body
 	margin-left: 6.25%;
 }
 
+#friends-core p, #friends-core h1, #friends-core h3
+{
+	background-color: white;	
+}
+
+#friends-core
+{
+	background-color: gray;
+	text-align: center;
+}
+
+#friends-core .friend-cont
+{
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background-color: white;
+	min-height: 10%;
+}
+
+#friends-core table
+{
+	margin-left: 35%;
+	margin-right: 35%;
+}
+
+#friends-core button
+{
+	min-height: 60px;
+}
+
+.profile-cont
+{
+	margin-left: 8%;
+}
+
 .largebutton
 {
 	width: 50%;
+	height: 100%;
+}
+
+.medbutton
+{
+	width: 33.33%;
 	height: 100%;
 }
 
@@ -86,6 +133,12 @@ body
 	min-width: 50px;
 	min-height: 50px;
 	padding-bottom: 20px;
+}
+
+.smallpic
+{
+	max-width: 50px;
+	max-height: 50px;
 }
 
 .blue
@@ -108,32 +161,52 @@ body
 	background-color: #efbcbc;
 }
 
-.dropdownmenu
+.dropdownmenu, .notification-menu
 {
 	display: none;
 	position: absolute;
 	vertical-align: top;
-	left: 2px;
-	top: 65px;
+	top: 50px;
 	width: 300px;
 	height: 100%;
-	background-color: black;
+	background-color: gray;
 	opacity: 0.95;
 	color: white;
 	z-index: 2;
-	
 }
 
 .dropdownitem
 {
 	font-size: 2em;
 	color: white;
-	background-color: #0A0A0A;
 	width: 300px;
 	text-align: left;	
 }
 
 .dropdownitem.indent
 {
-	margin-left: 3%;
+	margin-left: 10%;
 }
+
+.notification-menu
+{
+	right: 0px;
+}
+
+.note-item
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: black;
+}
+
+.note-item label, .note-item p
+{
+	font-size: 140%;
+}
+
+.note-item p
+{
+	color: gray;
+}
+

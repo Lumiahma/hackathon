@@ -69,6 +69,11 @@ function fetchEvents(params)
 
 }
 
+function redirect(target)
+{
+	window.location.href = target;
+}
+
 //initial setup function, aíd functions go above this
 $(document).ready(function()
 {
@@ -76,8 +81,6 @@ $(document).ready(function()
 
 	$('.titlebar-drop').on("click", function(evt)
 	{
-		console.log("Test: " + $('.dropdownmenu').css("display"));
-
 		if($('.dropdownmenu').css("display") == "block")
 		{
 			$('.dropdownmenu').hide();
@@ -86,8 +89,18 @@ $(document).ready(function()
 		{
 			$('.dropdownmenu').show();
 		}
+	});
 
-		console.log("HURDUR");
+	$('.alarm').on("click", function(evt)
+	{
+		if($('.notification-menu').css("display") == "block")
+		{
+			$('.notification-menu').hide();
+		}
+		else
+		{
+			$('.notification-menu').show();
+		}
 	});
 
 	$('#calendar').fullCalendar
