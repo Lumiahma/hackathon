@@ -131,29 +131,29 @@ $(document).ready(function()
 	{
 		fetchTest().then(function(result)
 		{
-			console.log("Test 1:" + result[0].title);
+			/*console.log("Test 1:" + result[0].title);
 			console.log("Test 2:" + timestampToDate(result[0].times[0].start_datetime));
 			console.log("Test 3:" + timestampToDate(result[0].times[0].end_datetime));
 			/*console.log("Test 4:" + result[0].times[0].start_datetime);
 			console.log("Test 5:" + result[0].times[0].end_datetime);*/
-			console.log("Test 6:" + !result[0].single_datetime ? result[0].times[0].start_datetime : 					
+			/*console.log("Test 6:" + !result[0].single_datetime ? result[0].times[0].start_datetime : 					
 					result[0].start_datetime);
 			console.log("Test 7:" + !result[0].single_datetime ? result[0].times[0].end_datetime : 
 					result[0].end_datetime);
 			console.log("Test 8:" + result[0].contact_info.link);
 			console.log("Test 9:" + result[0].single_datetime == false);
 			console.log("Test 10:" + Date.now());
-			
+			*/
 			var testEvent = 
 			{
 				"title": result[0].title + "\n\n" + result[0].description,
 				"allDay": false,
-				"start": !result[0].single_datetime ? timestampToDate(result[0].times[0].start_datetime) : 					
+				/*"start": !result[0].single_datetime ? timestampToDate(result[0].times[0].start_datetime) : 					
 					timestampToDate(result[0].start_datetime),
 				"end":	 !result[0].single_datetime ? timestampToDate(result[0].times[0].end_datetime) : 
-					timestampToDate(result[0].end_datetime)
-				/*"start": Date.now(),
-				"end": Date.now() + 3600*/
+					timestampToDate(result[0].end_datetime) */
+				"start": Date.now(),
+				"end": Date.now() + 7200000
 			}			
 			
 			$('#calendar').fullCalendar('renderEvent',testEvent);	
